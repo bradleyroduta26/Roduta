@@ -1,0 +1,15 @@
+{% extends 'app/base.html' %}
+{% load static %}
+{% block content %}
+    <br>
+    <div style="text-align: center;">
+    <a href="{% url 'Faculty_create' %}">+ New Faculty</a>
+    </div>
+    <div class="nav-right">
+    </div>
+    {% for Faculty in Faculties %}
+        <div class="post-entry">
+            <h2><a href="{% url 'Faculty_detail' Faculty.pk %}">{{ Faculty.FacultyID }}</a></h2>
+        </div>
+{% endfor %}
+{% endblock content %}

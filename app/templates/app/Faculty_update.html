@@ -1,0 +1,12 @@
+{% extends 'app/base.html' %}
+{% load static %}
+{% block content %}
+    <h1>Edit Faculty</h1>
+    <div style="text-align: center;">
+    <form action="{% url 'Faculty_update' Faculty.pk %}" method="post">
+        {% csrf_token %}
+        {{form.as_p}}
+        <input class="button" type="submit" value="Update">
+    </form>
+    </div>
+{% endblock content %}

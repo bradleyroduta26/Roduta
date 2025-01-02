@@ -1,0 +1,12 @@
+{% extends 'app/base.html' %}
+{% load static %}
+{% block content %}
+        <div style="text-align: center;">
+        <div class="post-entry">
+            <h2><a href="">{{Student.StudentID}}</a></h2>
+            <p>{{Student.body}}</p>
+        </div>
+        <a href="{% url 'Student_update' Student.pk %}">+ Edit Student</a>
+        <a href="{% url 'Student_delete' Student.pk %}">- Delete Student</a>
+        </div>
+{% endblock content %}

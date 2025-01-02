@@ -1,9 +1,7 @@
-h1 {
-    padding-top: 0px;
-    padding-bottom: 0px;
-    font-size: 50px;
+.post-entry {
+    width: 50%;
+    margin: 0 auto;
     text-align: center;
-    color: #000000;
 }
 
 .Pgrap {
@@ -47,7 +45,7 @@ p {
 }
 
 body {
-    background-color: #ccccff;
+    background-color: #fffcc;
     margin: 0;
 }
 
@@ -64,25 +62,8 @@ body {
     filter: grayscale(60%);
 }
 
-.image-container {
-    margin-left: 280px;
-    display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
-    gap: 105px;
-    padding: 10px;
-}
-
-.grid-img {
-    filter: grayscale(60%);
-    border: 5px solid #8000ff;
-    border-radius: 15px;
-    width: auto;
-    height: 300px;
-    object-fit: cover;
-}
-
 .NavBar {
-    background-color: #944dff;
+    background-color: #00FF9C;
     padding: 15px;
     text-align: center;
     word-spacing: 50px;

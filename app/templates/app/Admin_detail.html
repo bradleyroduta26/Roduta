@@ -1,0 +1,11 @@
+{% extends 'app/base.html' %}
+{% load static %}
+{% block content %}
+        <div style="text-align: center;">
+        <div class="post-entry">
+            <h2><a href="">{{Admin.AdminID}}</a></h2>
+        </div>
+        <a href="{% url 'Admin_update' Admin.pk %}">+ Edit Admin</a>
+        <a href="{% url 'Admin_delete' Admin.pk %}">- Delete Admin</a>
+        </div>
+{% endblock content %}

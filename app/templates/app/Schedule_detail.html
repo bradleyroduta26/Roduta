@@ -1,0 +1,12 @@
+{% extends 'app/base.html' %}
+{% load static %}
+{% block content %}
+        <div style="text-align: center;">
+        <div class="post-entry">
+            <h2><a href="">{{Schedule.title}}</a></h2>
+            <p>{{Schedule.body}}</p>
+        </div>
+        <a href="{% url 'Schedule_update' Schedule.pk %}">+ Edit Schedule</a>
+        <a href="{% url 'Schedule_delete' Schedule.pk %}">- Delete Schedule</a>
+        </div>
+{% endblock content %}

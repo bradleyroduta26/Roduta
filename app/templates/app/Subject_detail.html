@@ -1,0 +1,12 @@
+{% extends 'app/base.html' %}
+{% load static %}
+{% block content %}
+        <div style="text-align: center;">
+        <div class="post-entry">
+            <h2><a href="">{{Subject.title}}</a></h2>
+            <p>{{Subject.body}}</p>
+        </div>
+        <a href="{% url 'Subject_update' Subject.pk %}">+ Edit Subject</a>
+        <a href="{% url 'Subject_delete' Subject.pk %}">- Delete Subject</a>
+        </div>
+{% endblock content %}

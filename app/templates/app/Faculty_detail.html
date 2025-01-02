@@ -1,0 +1,11 @@
+{% extends 'app/base.html' %}
+{% load static %}
+{% block content %}
+        <div style="text-align: center;">
+        <div class="post-entry">
+            <h2><a href="">{{Faculty.FacultyID}}</a></h2>
+        </div>
+        <a href="{% url 'Faculty_update' Faculty.pk %}">+ Edit Faculty</a>
+        <a href="{% url 'Faculty_delete' Faculty.pk %}">- Delete Faculty</a>
+        </div>
+{% endblock content %}

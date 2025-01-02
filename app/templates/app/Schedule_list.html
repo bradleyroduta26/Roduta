@@ -1,0 +1,16 @@
+{% extends 'app/base.html' %}
+{% load static %}
+{% block content %}
+    <br>
+    <div style="text-align: center;">
+    <a href="{% url 'Schedule_create' %}">+ New Schedule Post</a>
+    </div>
+    <div class="nav-right">
+    </div>
+    {% for Schedule in Schedules %}
+        <div class="post-entry">
+            <h2><a href="{% url 'Schedule_detail' Schedule.pk %}">{{Schedule.title}}</a></h2>
+
+        </div>
+    {% endfor%}
+{% endblock content %}

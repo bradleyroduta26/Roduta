@@ -1,0 +1,16 @@
+{% extends 'app/base.html' %}
+{% load static %}
+{% block content %}
+    <br>
+    <div style="text-align: center;">
+    <a href="{% url 'Student_create' %}">+ New Student</a>
+    </div>
+    <div class="nav-right">
+    </div>
+    {% for Student in Students %}
+        <div class="post-entry">
+            <h2><a href="{% url 'Student_detail' Student.pk %}">{{Student.StudentID}}</a></h2>
+
+        </div>
+    {% endfor%}
+{% endblock content %}

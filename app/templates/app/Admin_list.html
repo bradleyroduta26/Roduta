@@ -1,0 +1,15 @@
+{% extends 'app/base.html' %}
+{% load static %}
+{% block content %}
+    <br>
+    <div style="text-align: center;">
+    <a href="{% url 'Admin_create' %}">+ New Admin</a>
+    </div>
+    <div class="nav-right">
+    </div>
+    {% for Admin in Admins %}
+        <div class="post-entry">
+            <h2><a href="{% url 'Admin_detail' Admin.pk %}">{{ Admin.AdminID }}</a></h2>
+        </div>
+{% endfor %}
+{% endblock content %}

@@ -1,0 +1,12 @@
+{% extends 'app/base.html' %}
+{% load static %}
+{% block content %}
+    <h1>New Schedule</h1>
+    <div style="text-align: center;">
+    <form action="{% url 'Subject_create' %}" method="post">
+        {% csrf_token %}
+        {{form.as_p}}
+        <input class="button" type="submit" value="Save">
+    </form>
+    </div>
+{% endblock content %}
